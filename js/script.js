@@ -19,7 +19,7 @@ if(isMobileDevice){
     // body.style.height = `${width}px`
     // body.style.width = `${height}px`
     screenGame.style.height = `${width}px`
-    screenGame.style.width = '600px'
+    screenGame.style.width = `${height}px`
     screenGame.style.transform = 'rotate(90deg)'
     pipe.style.animation = 'pipe-animation 0.8s linear infinite'
 }
