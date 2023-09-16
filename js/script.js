@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const pipe = document.querySelector('.pipe')
 const mario = document.querySelector('.mario')
 const counter = document.querySelector('.counter')
@@ -10,12 +11,16 @@ let armazenador = JSON.parse(localStorage.getItem('score'));
 let time = 1;
 let width = window.screen.width;
 let height = window.screen.height;
+let details = navigator.userAgent;
+let regexp = /android|iphone|kindle|ipad/i;
+let isMobileDevice = regexp.test(details);
 
-
-if(height > width){
-    screenGame.style.transform = 'rotate(90deg)'
+if(isMobileDevice){
+    // body.style.height = `${width}px`
+    // body.style.width = `${height}px`
     screenGame.style.height = `${width}px`
-    screenGame.style.width = '100%'
+    screenGame.style.width = '600px'
+    screenGame.style.transform = 'rotate(90deg)'
     pipe.style.animation = 'pipe-animation 0.8s linear infinite'
 }
 
